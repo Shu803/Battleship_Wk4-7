@@ -1,0 +1,4 @@
+/Users/shu/Projects/battleship/battleship/obj/Debug/netcoreapp2.0/Battleship.csprojResolveAssemblyReference.cache
+/Users/shu/Projects/battleship/battleship/obj/Debug/netcoreapp2.0/Battleship.csproj.CoreCompileInputs.cache
+/Users/shu/Projects/battleship/battleship/obj/Debug/netcoreapp2.0/Battleship.AssemblyInfoInputs.cache
+/Users/shu/Projects/battleship/battleship/obj/Debug/netcoreapp2.0/Battleship.AssemblyInfo.cs
