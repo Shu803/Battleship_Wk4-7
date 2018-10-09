@@ -14,7 +14,7 @@ class DiscoveryController
     // '' </remarks>
     public static void HandleDiscoveryInput()
     {
-        if (SwinGame.KeyTyped(KeyCode.VK_ESCAPE))
+        if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE))
         {
             AddNewState(GameState.ViewingGameMenu);
         }

@@ -6,3 +6,7 @@ C:\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.csprojResolveAssemblyRefe
 C:\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.csproj.CoreCompileInputs.cache
 C:\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.AssemblyInfoInputs.cache
 C:\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.AssemblyInfo.cs
+C:\Users\User\Desktop\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Battleship_Wk4-7\obj\Debug\netcoreapp2.0\battleship.AssemblyInfo.cs

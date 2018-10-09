@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="SwinGame">
+      <HintPath>..\..\Downloads\CSharp_SwinGame_3_6_VS10PROJ\ProjectTemplate\lib\SwinGame.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="DeploymentController.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
@@ -33,10 +39,10 @@
     <Compile Update="MenuController.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AIPlayer.cs">
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Model\AIPlayer.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="ISeaGrid.cs">
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Model\ISeaGrid.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>

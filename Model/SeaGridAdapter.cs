@@ -42,10 +42,6 @@ namespace Battleship
         {
         }
     }
-    EndPropertyImplementsISeaGrid.Changed;
-Endclass Unknown
-    {
-    }
 
 
     // '' <summary>
