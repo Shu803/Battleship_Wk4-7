@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Battleship
 {
     // '' <summary>
@@ -11,7 +12,6 @@ namespace Battleship
     // '' </remarks>
     public class SeaGrid : ISeaGrid
     {
-
         private const int _WIDTH = 10;
 
         private const int _HEIGHT = 10;
@@ -56,12 +56,14 @@ namespace Battleship
 
         public TileView this[int x, int y]
         {
+            
         }
     }
-    Endclass Unknown
+
+   /* Endclass Unknown
     {
     }
-
+    */
 
     // '' <summary>
     // '' AllDeployed checks if all the ships are deployed

@@ -17,8 +17,8 @@ namespace Battleship
         public SeaGridAdapter(SeaGrid grid)
         {
             _MyGrid = grid;
-            _MyGrid.Changed += new EventHandler(// TODO: Warning!!!! NULL EXPRESSION DETECTED...
-        .);
+            _MyGrid.Changed += new EventHandler(MyGrid_Changed); //TODO
+
         }
 
         // '' <summary>
@@ -28,6 +28,7 @@ namespace Battleship
         // '' <param name="e">what needs to be redrawn</param>
         private void MyGrid_Changed(object sender, EventArgs e)
         {
+           
             Changed(this, e);
         }
 

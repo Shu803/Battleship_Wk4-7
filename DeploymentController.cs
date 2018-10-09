@@ -1,4 +1,6 @@
-﻿using SwinGameSDK;
+﻿using System;
+using Battleship;
+using SwinGameSDK;
 // '' <summary>
 // '' The DeploymentController controls the players actions
 // '' during the deployment phase.
