@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -12,6 +13,7 @@ namespace Battleship
     // '' </remarks>
     public class SeaGrid : ISeaGrid
     {
+
         private const int _WIDTH = 10;
 
         private const int _HEIGHT = 10;
@@ -19,6 +21,12 @@ namespace Battleship
         private Dictionary<ShipName, Ship> _Ships;
 
         private int _ShipsKilled = 0;
+        private Dictionary<ShipName, Ship> _Ships1;
+
+        public SeaGrid(Dictionary<ShipName, Ship> ships1)
+        {
+            _Ships1 = ships1;
+        }
 
         // '' <summary>
         // '' The sea grid has changed and should be redrawn.
@@ -54,16 +62,16 @@ namespace Battleship
             }
         }
 
+        public bool AllDeployed { get; internal set; }
+
         public TileView this[int x, int y]
         {
-            
         }
     }
-
-   /* Endclass Unknown
+    Endclass Unknown
     {
     }
-    */
+
 
     // '' <summary>
     // '' AllDeployed checks if all the ships are deployed
