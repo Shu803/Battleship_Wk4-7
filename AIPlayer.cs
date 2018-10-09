@@ -150,7 +150,7 @@ namespace Battleship
                 // Dont delay if window is closed
                 if (SwinGame.WindowCloseRequested)
                     return;
-
+                //
                 SwinGame.Delay(5);
                 SwinGame.ProcessEvents();
                 SwinGame.RefreshScreen();

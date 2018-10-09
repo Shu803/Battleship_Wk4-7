@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -8,7 +10,7 @@ namespace Battleship
     // '' the AI knows it has hit multiple ships. Then will try to destoy all around tiles
     // '' that have been hit.
     // '' </summary>
-    public class AIHardPlayer
+    public class AIHardPlayer: AIPlayer
     {
 
         // '' <summary>
@@ -57,7 +59,14 @@ namespace Battleship
             {
                 get
                 {
-                    return;
+                    if (Source == ShotAt)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
 
@@ -65,7 +74,14 @@ namespace Battleship
             {
                 get
                 {
-                    return;
+                    if (Source == ShotAt)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
@@ -127,11 +143,11 @@ namespace Battleship
                 switch (_CurrentState)
                 {
                     case AIStates.Searching:
-                        this.SearchCoords(row, column);
+                        this.SearchCoords(ref row, ref column);
                         break;
                     case AIStates.TargetingShip:
                     case AIStates.HittingShip:
-                        this.TargetCoords(row, column);
+                        this.TargetCoords(ref row, ref column);
                         break;
                     default:
                         throw new ApplicationException("AI has gone in an invalid state");
@@ -262,7 +278,7 @@ namespace Battleship
         // '' onto the targets stack
         // '' </summary>
         // '' <param name="toRemove"></param>
-        private void RemoveShotsAround(Location toRemove)
+        private void RemoveShotsAround(Location toRemovem, int row, int column)
         {
             Stack<Target> newStack = new Stack<Target>();
             // create a new stack
@@ -278,9 +294,9 @@ namespace Battleship
                     _Targets.Clear();
                     // clear the _Targets stack
                     // for all the targets in the newStack, move them back onto the _Targets stack
-                    foreach (Target t in newStack)
+                    foreach (Target target in newStack)
                     {
-                        _Targets.Push(t);
+                        _Targets.Push(target);
                     }
 
                     // if the _Targets stack is 0 then change the AI's state back to searching
@@ -363,14 +379,14 @@ namespace Battleship
 
                 }
 
-                foreach (Target t in _NoMatch)
+                foreach (Target target in _NoMatch)
                 {
-                    _Targets.Push(t);
+                    _Targets.Push(target);
                 }
 
-                foreach (Target t in _Match)
+                foreach (Target target in _Match)
                 {
-                    _Targets.Push(t);
+                    _Targets.Push(target);
                 }
 
                 // '' <summary>

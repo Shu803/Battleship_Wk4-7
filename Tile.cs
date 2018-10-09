@@ -56,10 +56,8 @@ namespace Battleship
                 if ((_Ship == null))
                 {
                     _Ship = value;
-                    if (value)
+                    if (value != null)
                     {
-                        IsNot;
-                        null;
                         _Ship.AddTile(this);
                     }
 
@@ -134,10 +132,8 @@ namespace Battleship
             if ((false == Shot))
             {
                 Shot = true;
-                if (_Ship)
+                if (_Ship == null)
                 {
-                    IsNot;
-                    null;
                     _Ship.Hit();
                 }
 
