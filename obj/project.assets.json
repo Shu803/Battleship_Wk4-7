@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shu/Projects/battleship/Battleship/Battleship.csproj",
-      "projectName": "Battleship",
-      "projectPath": "/Users/shu/Projects/battleship/Battleship/Battleship.csproj",
+      "projectUniqueName": "/Users/shu/Battleship_Wk4-7/battleship.csproj",
+      "projectName": "battleship",
+      "projectPath": "/Users/shu/Battleship_Wk4-7/battleship.csproj",
       "packagesPath": "/Users/shu/.nuget/packages/",
-      "outputPath": "/Users/shu/Projects/battleship/Battleship/obj",
+      "outputPath": "/Users/shu/Battleship_Wk4-7/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
