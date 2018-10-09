@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -10,7 +13,7 @@ namespace Battleship
 
         protected static Random _Random = new Random();
 
-        private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
+        private static Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
 
         private SeaGrid _playerGrid = new SeaGrid(_Ships);
 
@@ -84,7 +87,7 @@ namespace Battleship
         {
             get
             {
-                return _playerGrid;
+                return PlayerGrid1;
             }
         }
 
@@ -92,7 +95,7 @@ namespace Battleship
         {
             get
             {
-                return _playerGrid.AllDeployed;
+                return PlayerGrid1.AllDeployed;
             }
         }
 
@@ -100,8 +103,20 @@ namespace Battleship
         {
             get
             {
+                int destroyed = 0;
                 // Check if all ships are destroyed... -1 for the none ship
-                return;
+                foreach (KeyValuePair<ShipName, Ship> ship in _Ships) { 
+                    if (ship.Value.IsDestroyed)
+                    {
+                        destroyed++;
+                    }
+                }
+
+                if (destroyed == 5)
+                {
+                    return true;
+                }
+                return false;
             }
         }
 
@@ -159,6 +174,8 @@ namespace Battleship
 
             }
         }
+
+        public SeaGrid PlayerGrid1 { get => _playerGrid; set => _playerGrid = value; }
 
         public IEnumerator<Ship> GetShipEnumerator()
         {
@@ -226,6 +243,7 @@ namespace Battleship
                 if ((shipToPlace == ShipName.None))
                 {
                     // TODO: Continue For... Warning!!! not translated
+
                 }
 
                 placementSuccessful = false;
@@ -253,7 +271,7 @@ namespace Battleship
                     }
                     catch (System.Exception placementSuccessful)
                     {
-                        false;
+                        return false;
                     }
 
                 }

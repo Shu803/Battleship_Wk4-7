@@ -1,4 +1,5 @@
-﻿using SwinGameSDK;
+﻿using System;
+using SwinGameSDK;
 // '' <summary>
 // '' The EndingGameController is responsible for managing the interactions at the end
 // '' of a game.

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -89,7 +91,7 @@ namespace Battleship
             _shipName = ship;
             _tiles = new List<Tile>();
             // gets the ship size from the enumarator
-            _sizeOfShip = _shipName;
+            _sizeOfShip = (int)_shipName;
         }
 
         // '' <summary>
@@ -135,7 +137,7 @@ namespace Battleship
         {
             get
             {
-                return;
+                return (_tiles.Count == 0);
             }
         }
 

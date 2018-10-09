@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -22,6 +24,8 @@ namespace Battleship
 
         private int _playerIndex = 0;
 
+        private List<Player> players = new List<Player>();
+
         // '' <summary>
         // '' The current player.
         // '' </summary>
@@ -32,9 +36,10 @@ namespace Battleship
         {
             get
             {
-                return _players(_playerIndex);
+                return players(_playerIndex);
             }
         }
+
 
         public void AddDeployedPlayer(Player p)
         {

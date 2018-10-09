@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Battleship
 {
     // '' <summary>
@@ -19,6 +21,12 @@ namespace Battleship
         private Dictionary<ShipName, Ship> _Ships;
 
         private int _ShipsKilled = 0;
+        private Dictionary<ShipName, Ship> _Ships1;
+
+        public SeaGrid(Dictionary<ShipName, Ship> ships1)
+        {
+            _Ships1 = ships1;
+        }
 
         // '' <summary>
         // '' The sea grid has changed and should be redrawn.
@@ -53,6 +61,8 @@ namespace Battleship
                 return _ShipsKilled;
             }
         }
+
+        public bool AllDeployed { get; internal set; }
 
         public TileView this[int x, int y]
         {
